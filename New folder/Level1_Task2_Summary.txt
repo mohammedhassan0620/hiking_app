@@ -1,2 +1,0 @@
-City with the highest number of restaurants: New Delhi
-City with the highest average rating: Inner City
