@@ -1,0 +1,23 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv(r"C:\Users\ELCOT\OneDrive\New folder\Dataset.csv.csv")
+city_counts = df['City'].value_counts()
+top_city = city_counts.idxmax()
+avg_rating_per_city = df.groupby('City')['Aggregate rating'].mean()
+highest_avg_rating_city = avg_rating_per_city.idxmax()
+print("City with the highest number of restaurants:", top_city)
+print("\nAverage rating per city:\n", avg_rating_per_city)
+print("\nCity with the highest average rating:", highest_avg_rating_city)
+city_counts.to_csv("Level1_Task2_CityCounts.csv")
+avg_rating_per_city.to_csv("Level1_Task2_AvgRatings.csv")
+with open("Level1_Task2_Summary.txt", "w") as f:
+    f.write("City with the highest number of restaurants: " + str(top_city) + "\n")
+    f.write("City with the highest average rating: " + str(highest_avg_rating_city) + "\n")
+plt.figure(figsize=(10, 6))
+avg_rating_per_city.sort_values(ascending=False).plot(kind='bar', color='lightgreen')
+plt.title("Average Restaurant Ratings by City")
+plt.xlabel("City")
+plt.ylabel("Average Rating")
+plt.tight_layout()
+plt.savefig("Level1_Task2_CityRatings.png")
+plt.show()

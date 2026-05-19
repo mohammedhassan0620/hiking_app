@@ -1,0 +1,11 @@
+Online delivery availability:
+Has Online delivery
+No     7100
+Yes    2451
+Name: count, dtype: int64
+
+Percentages:
+Has Online delivery
+No     74.337766
+Yes    25.662234
+Name: count, dtype: float64

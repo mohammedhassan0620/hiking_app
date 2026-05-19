@@ -1,0 +1,15 @@
+Price range distribution:
+Price range
+1    4444
+2    3113
+3    1408
+4     586
+Name: count, dtype: int64
+
+Percentages:
+Price range
+1    46.529159
+2    32.593446
+3    14.741912
+4     6.135483
+Name: count, dtype: float64

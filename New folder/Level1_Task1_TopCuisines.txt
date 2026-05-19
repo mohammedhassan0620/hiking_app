@@ -1,0 +1,13 @@
+Top 3 cuisines:
+Cuisines
+North Indian             936
+North Indian, Chinese    511
+Chinese                  354
+Name: count, dtype: int64
+
+Percentages:
+Cuisines
+North Indian             9.800021
+North Indian, Chinese    5.350225
+Chinese                  3.706418
+Name: count, dtype: float64
